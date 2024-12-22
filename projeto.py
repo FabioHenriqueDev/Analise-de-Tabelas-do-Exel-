@@ -29,7 +29,7 @@ print()
 print()
 
 soma_funcioarios_total = cadastro_funcionarios_df['Salário Total'].sum()
-print(f'Gasto total de Funcionários da Empresa: ${soma_funcioarios_total:,}')
+print(f'Gasto total de Funcionários da Empresa: R${soma_funcioarios_total:,}')
 
 print()
 print()
@@ -40,7 +40,7 @@ faturamentos_df['Faturamento Total'] = faturamentos_df['Valor Contrato Mensal'] 
 print(faturamentos_df.head())
 soma_faturamento_total = faturamentos_df['Faturamento Total'].sum()
 print()
-print(f'Soma de todos faturamentos da tabela: ${soma_faturamento_total:,}')
+print(f'Soma de todos faturamentos da tabela: R${soma_faturamento_total:,}')
 
 
 print()
@@ -75,4 +75,7 @@ print()
 
 #6. Qual o ticket médio mensal (faturamento médio mensal) dos contratos?
 # #Dica: .mean() calcula a média -> exemplo: media_colunaA = dataframe['colunaA'].mean()
+media_faturamento_mensal = cadastro_clientes_df['Valor Contrato Mensal'].mean()
+print(f'Faturamento médio mensal: R${media_faturamento_mensal:2,}')
+
 
